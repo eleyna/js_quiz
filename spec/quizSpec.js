@@ -63,6 +63,14 @@ describe('question4', function() {
 
 });
 
+describe('question5', function() {
+
+  it('returns the word with the last letter in the front', function() {
+    expect(quiz.backAround("hello")).toEqual("ohell");
+  });
+
+});
+
 
 
 
