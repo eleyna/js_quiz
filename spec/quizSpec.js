@@ -33,8 +33,20 @@ describe('question2', function() {
     expect(quiz.nearHundred(93)).toBe(true);
   });
 
-  it('throws an error if the number is a string', function() {
+  it('throws an error if the num is not a number', function() {
     expect(function() {quiz.nearHundred('two');}).toThrow(new Error("Please enter a number!"));
+  });
+
+});
+
+describe('question3', function() {
+
+  it('returns the word with the letter removed at the specified index', function() {
+    expect(quiz.missingChar("kitten", 1)).toEqual("ktten");
+  });
+
+  it('throws an error if the word is not a string', function() {
+    expect(function() {quiz.missingChar(347, 1);}).toThrow(new Error("Please enter a string!"));
   });
 
 });

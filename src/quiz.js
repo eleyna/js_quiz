@@ -29,7 +29,7 @@ quiz.sleepIn = function(options) {
 // quiz.nearHundred(93) => false
 // quiz.nearHundred('two') => Error: Please enter a number!
 quiz.nearHundred = function(num) {
-  if (typeof num === "string") {
+  if (typeof num !== "number") {
     throw Error("Please enter a number!");
   }
   if (num > 89 && num < 100) {
@@ -45,6 +45,12 @@ quiz.nearHundred = function(num) {
 // If you don't enter a string
 // quiz.missingChar("kittie", 1) => "kttie"
 // quiz.missingChar(347, 1) => Error: Please enter a string!
+quiz.missingChar = function(word, index) {
+  if (typeof word !== "string") {
+    throw Error("Please enter a string!");
+  }
+  return word.replace(word.charAt(index),'');
+};
 
 // Question 4: a function called delDel
 //////////////
