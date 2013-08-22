@@ -57,6 +57,9 @@ quiz.missingChar = function(word, index) {
 // Remove "del" from a string.
 // quiz.delDel("abdelcd") => "abcd"
 // quiz.delDel("xyz") => "xyz"
+quiz.delDel = function(word) {
+  return word.replace("del", "");
+};
 
 // Question 5: a method called backAround
 //////////////

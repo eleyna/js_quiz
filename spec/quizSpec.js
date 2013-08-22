@@ -51,6 +51,18 @@ describe('question3', function() {
 
 });
 
+describe('question4', function() {
+
+  it('returns the word with the substring "del" removed', function() {
+    expect(quiz.delDel("abdelcd")).toEqual("abcd");
+  });
+
+  it('returns the same word if it does not contain the substring "del"', function() {
+    expect(quiz.delDel("xyz")).toEqual("xyz");
+  });
+
+});
+
 
 
 
